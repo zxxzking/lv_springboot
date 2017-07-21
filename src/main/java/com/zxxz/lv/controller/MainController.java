@@ -1,6 +1,9 @@
 package com.zxxz.lv.controller;
 
+import com.zxxz.lv.Repository.OrderRepository;
+import com.zxxz.lv.dao.OrderDao;
 import com.zxxz.lv.entity.Order;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +21,27 @@ import java.util.Map;
 @Controller
 public class MainController {
 
+    @Autowired
+    private OrderDao orderDao;
+    @Autowired
+    private OrderRepository orderRepository;
+
     @GetMapping(value = "/index")
     public String index(Model model){
         model.addAttribute("name","zxxz");
         return "index";
     }
+
+
     @GetMapping(value = "/jquery")
     public String jquery(){
         return "jquery";
+    }
+
+
+    @GetMapping(value = "/angularjs")
+    public String angularjs(){
+        return "angularjs";
     }
     @PostMapping(value = "/postData")
     @ResponseBody
@@ -51,6 +67,10 @@ public class MainController {
         map.put("msg", "ok");
         map.put("value", order);
         return map;
+    }
+    @PostMapping("/findAll")
+    public @ResponseBody Object findAll(){
+        return orderDao.findAll();
     }
 
 }
