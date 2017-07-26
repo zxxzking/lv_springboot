@@ -29,6 +29,7 @@ public class WeatherController {
     @RequestMapping(value = "/queryWeather/v1.0", produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String getWeatherMsg(HttpServletRequest request, HttpServletResponse response) {
+
         String city = request.getParameter("city");
 
         Map result = new HashMap<String, Object>();

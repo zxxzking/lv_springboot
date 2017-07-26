@@ -1,148 +1,31 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>玩转spring boot——结合JDBC</title>
-    <script src="//cdn.bootcss.com/angular.js/1.5.6/angular.min.js"></script>
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        var app = angular.module('app', []);
-        app.controller('MainController', function($rootScope, $scope, $http) {
-
-            $scope.data = {};
-            $scope.rows = [];
-
-            //添加
-            $scope.add = function() {
-                $scope.data = {
-                    no : 'No.1234567890',
-                    quantity : 100,
-                    'date' : '2016-12-30'
-                };
-            }
-
-            //编辑
-            $scope.edit = function(id) {
-                for ( var i in $scope.rows) {
-                    var row = $scope.rows[i];
-                    if (id == row.id) {
-                        $scope.data = row;
-                        return;
-                    }
-                }
-            }
-
-            //移除
-            $scope.remove = function(id) {
-                for ( var i in $scope.rows) {
-                    var row = $scope.rows[i];
-                    if (id == row.id) {
-                        $scope.rows.splice(i, 1);
-                        return;
-                    }
-                }
-            }
-
-            //保存
-            $scope.save = function() {
-                $http({
-                    url : '/save',
-                    method : 'POST',
-                    data : $scope.data
-                }).success(function(r) {
-                    //保存成功后更新数据
-                    $scope.get(r.id);
-                });
-            }
-
-            //删除
-            $scope.del = function(id) {
-                $http({
-                    url : '/delete?id=' + id,
-                    method : 'POST',
-                }).success(function(r) {
-                    //删除成功后移除数据
-                    $scope.remove(r.id);
-                });
-            }
-
-            //获取数据
-            $scope.get = function(id) {
-                $http({
-                    url : '/get?id=' + id,
-                    method : 'POST',
-                }).success(function(data) {
-                    for ( var i in $scope.rows) {
-                        var row = $scope.rows[i];
-                        if (data.id == row.id) {
-                            row.no = data.no;
-                            row.date = data.date;
-                            row.quantity = data.quantity;
-                            return;
-                        }
-                    }
-                    $scope.rows.push(data);
-                });
-            }
-
-            //初始化载入数据
-            $http({
-                url : '/findAll',
-                method : 'POST'
-            }).success(function(rows) {
-                for ( var i in rows) {
-                    var row = rows[i];
-                    $scope.rows.push(row);
-                }
-            });
-        });
-        /*]]>*/
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tab Weather Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //for-mobile-apps -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,400,700" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/raccordion.css" />
+    <!--skycons-icons-->
+    <script src="/static/js/skycons.js"></script>
 </head>
-<body ng-app="app" ng-controller="MainController">
-<h1>玩转spring boot——结合JDBC</h1>
-<h4>
-    <a href="http://www.cnblogs.com/GoodHelper/">from 刘冬的博客</a>
-</h4>
-<input type="button" value="添加" ng-click="add()" />
-<input type="button" value="保存" ng-click="save()" />
-<br />
-<br />
-<h3>清单信息：</h3>
-<input id="id" type="hidden" ng-model="data.id" />
-<table cellspacing="1" style="background-color: #a0c6e5">
-    <tr>
-        <td>编号：</td>
-        <td><input id="no" ng-model="data.no" /></td>
-        <td>日期：</td>
-        <td><input id="date" ng-model="data.date" /></td>
-        <td>数量：</td>
-        <td><input id="quantity" ng-model="data.quantity" /></td>
-    </tr>
-</table>
+<body>
+    <div class="content" id="Main-Content">
+        <div class="wapper">
+            <div class="accordion-wrapper">
+                <div class="slide" style="left: 350px; overflow: hidden; height: 480px;"><img src="images/晴.jpg" /><div class="caption" style="opacity: 0;"><div class="w3layouts-info"><div class="w3layouts-info-top"><h3>30~40°c</h3><h4>晴</h4><p>中国 上海</p></div><canvas id="clear-day" width="40" height="40"></canvas><div class="w3layouts-info-bottom"><h5>2017-07-25</h5></div></div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/jquery.raccordion.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.animation.easing.js" type="text/javascript"></script>
+    <!--skycons-icons-->
+    <script src="/static/js/skycons.js"></script>
 
-<br />
-<h3>清单列表：</h3>
-<table cellspacing="1" style="background-color: #a0c6e5">
-    <tr
-            style="text-align: center; COLOR: #0076C8; BACKGROUND-COLOR: #F4FAFF; font-weight: bold">
-        <td>操作</td>
-        <td>编号</td>
-        <td>日期</td>
-        <td>数量</td>
-    </tr>
-    <tr ng-repeat="row in rows" bgcolor='#F4FAFF'>
-        <td><input ng-click="edit(row.id)" value="编辑" type="button" /><input
-                ng-click="del(row.id)" value="删除" type="button" /></td>
-        <td>{{row.no}}</td>
-        <td>{{row.date}}</td>
-        <td>{{row.quantity}}</td>
-    </tr>
-</table>
-
-<br />
-<a href="http://www.cnblogs.com/GoodHelper/">点击访问原版博客</a>
 </body>
 </html>
-
-index.html

@@ -4,7 +4,7 @@ $(function(){
         url:"/weather/queryWeather/v1.0",
         async:true,
         data:{
-            city:'shanghai'
+            city:'beijing'
         },
         success:function(res){
             var div = '';

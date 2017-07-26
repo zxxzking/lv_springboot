@@ -50,11 +50,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
     </dependency>
+    <!-- spring MVC-->
+    <!-- thymeleaf模板 如果不导入这个包 会导致页面找不到 如果不用thymeleaf模板渲染 也需要导入这个包-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-      <optional>true</optional>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
+
 
     <dependency>
       <groupId>mysql</groupId>
@@ -114,7 +116,6 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.0</version>
     </dependency>
-    <!-- 热部署 -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -152,6 +153,13 @@
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
+    </dependency>
   </dependencies>
 
 
@@ -162,6 +170,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork><!-- 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+        </configuration>
         <dependencies>
           <dependency>
             <groupId>org.springframework</groupId>

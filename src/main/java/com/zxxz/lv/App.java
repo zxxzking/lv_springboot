@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Hello world!
  *
  */
-@EnableWebMvc
+@Controller
 @SpringBootApplication
 @MapperScan(basePackages = "com.zxxz.lv.mapper")
 public class App{
@@ -19,4 +19,9 @@ public class App{
         SpringApplication.run(App.class,args);
 
     }
+    @RequestMapping("/")
+    public String entry(){
+        return "redirect:/index";
+    }
+
 }
