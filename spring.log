@@ -10264,3 +10264,826 @@ Caused by: java.lang.NullPointerException: null
 2017-07-26 15:34:31.454  INFO 7316 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2017-07-26 15:34:31.482  INFO 7316 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
 2017-07-26 15:34:31.538  INFO 7316 --- [http-nio-9013-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-07-26 16:41:55.551  INFO 1132 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 1132 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 16:41:55.553  INFO 1132 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 16:41:55.776  INFO 1132 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35554869: startup date [Wed Jul 26 16:41:55 CST 2017]; root of context hierarchy
+2017-07-26 16:41:57.318  INFO 1132 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 16:41:57.328  INFO 1132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 16:41:57.329  INFO 1132 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 16:41:57.418  INFO 1132 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 16:41:57.419  INFO 1132 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1647 ms
+2017-07-26 16:41:57.640  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 16:41:57.641  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 16:41:57.641  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 16:41:57.642  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 16:41:57.642  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 16:41:57.642  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 16:41:57.642  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 16:41:57.644  INFO 1132 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 16:41:58.307  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35554869: startup date [Wed Jul 26 16:41:55 CST 2017]; root of context hierarchy
+2017-07-26 16:41:58.354  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 16:41:58.356  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 16:41:58.358  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 16:41:58.360  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:41:58.361  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 16:41:58.361  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:41:58.362  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:41:58.363  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:41:58.365  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 16:41:58.365  INFO 1132 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:41:58.392  INFO 1132 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:41:58.392  INFO 1132 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:41:58.428  INFO 1132 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:41:59.203  INFO 1132 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 16:41:59.364  INFO 1132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 16:41:59.422  INFO 1132 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 16:41:59.424  INFO 1132 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 16:41:59.429  INFO 1132 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 16:41:59.480  INFO 1132 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 16:41:59.486  INFO 1132 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.268 seconds (JVM running for 4.943)
+2017-07-26 16:48:52.631  INFO 8516 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 8516 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 16:48:52.632  INFO 8516 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 16:48:52.854  INFO 8516 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69cb4ddf: startup date [Wed Jul 26 16:48:52 CST 2017]; root of context hierarchy
+2017-07-26 16:48:54.489  INFO 8516 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 16:48:54.499  INFO 8516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 16:48:54.500  INFO 8516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 16:48:54.596  INFO 8516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 16:48:54.597  INFO 8516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1746 ms
+2017-07-26 16:48:54.818  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 16:48:54.819  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 16:48:54.819  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 16:48:54.820  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 16:48:54.820  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 16:48:54.820  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 16:48:54.820  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 16:48:54.822  INFO 8516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 16:48:55.506  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69cb4ddf: startup date [Wed Jul 26 16:48:52 CST 2017]; root of context hierarchy
+2017-07-26 16:48:55.557  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 16:48:55.558  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 16:48:55.560  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 16:48:55.562  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:48:55.563  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 16:48:55.564  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:48:55.564  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:48:55.565  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:48:55.567  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 16:48:55.568  INFO 8516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:48:55.596  INFO 8516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:48:55.597  INFO 8516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:48:55.635  INFO 8516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:48:56.430  INFO 8516 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 16:48:56.592  INFO 8516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 16:48:56.649  INFO 8516 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 16:48:56.650  INFO 8516 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 16:48:56.655  INFO 8516 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 16:48:56.719  INFO 8516 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 16:48:56.724  INFO 8516 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.422 seconds (JVM running for 5.101)
+2017-07-26 16:58:42.684  INFO 10740 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 10740 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 16:58:42.685  INFO 10740 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 16:58:43.319  INFO 10740 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@694b6ad0: startup date [Wed Jul 26 16:58:43 CST 2017]; root of context hierarchy
+2017-07-26 16:58:46.480  INFO 10740 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 16:58:46.491  INFO 10740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 16:58:46.492  INFO 10740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 16:58:46.648  INFO 10740 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 16:58:46.648  INFO 10740 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3537 ms
+2017-07-26 16:58:46.881  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 16:58:46.882  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 16:58:46.882  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 16:58:46.882  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 16:58:46.882  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 16:58:46.882  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 16:58:46.883  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 16:58:46.884  INFO 10740 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 16:58:47.659  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@694b6ad0: startup date [Wed Jul 26 16:58:43 CST 2017]; root of context hierarchy
+2017-07-26 16:58:47.723  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 16:58:47.725  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 16:58:47.728  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 16:58:47.730  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:58:47.732  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 16:58:47.732  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:58:47.733  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:58:47.734  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:58:47.736  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 16:58:47.736  INFO 10740 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 16:58:47.766  INFO 10740 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:58:47.766  INFO 10740 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:58:47.805  INFO 10740 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 16:58:48.715  INFO 10740 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 16:58:48.880  INFO 10740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 16:58:48.931  INFO 10740 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 16:58:48.933  INFO 10740 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 16:58:48.937  INFO 10740 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 16:58:48.990  INFO 10740 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 16:58:48.995  INFO 10740 --- [restartedMain] com.zxxz.lv.App                          : Started App in 7.166 seconds (JVM running for 8.362)
+2017-07-26 17:07:38.484  INFO 9796 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 9796 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:07:38.485  INFO 9796 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:07:38.769  INFO 9796 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@645d69db: startup date [Wed Jul 26 17:07:38 CST 2017]; root of context hierarchy
+2017-07-26 17:07:40.575  INFO 9796 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:07:40.584  INFO 9796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:07:40.585  INFO 9796 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:07:40.674  INFO 9796 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:07:40.674  INFO 9796 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1910 ms
+2017-07-26 17:07:40.894  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:07:40.895  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:07:40.895  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:07:40.896  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:07:40.896  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:07:40.896  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:07:40.897  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:07:40.898  INFO 9796 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:07:41.576  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@645d69db: startup date [Wed Jul 26 17:07:38 CST 2017]; root of context hierarchy
+2017-07-26 17:07:41.622  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:07:41.623  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:07:41.626  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:07:41.628  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:07:41.630  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:07:41.630  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:07:41.630  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:07:41.631  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:07:41.633  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:07:41.634  INFO 9796 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:07:41.661  INFO 9796 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:07:41.661  INFO 9796 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:07:41.698  INFO 9796 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:07:42.524  INFO 9796 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:07:42.688  INFO 9796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:07:42.742  INFO 9796 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:07:42.744  INFO 9796 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:07:42.749  INFO 9796 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:07:42.808  INFO 9796 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:07:42.814  INFO 9796 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.689 seconds (JVM running for 5.5)
+2017-07-26 17:10:47.477  INFO 8304 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 8304 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:10:47.479  INFO 8304 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:10:47.724  INFO 8304 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c7b4321: startup date [Wed Jul 26 17:10:47 CST 2017]; root of context hierarchy
+2017-07-26 17:10:49.472  INFO 8304 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:10:49.484  INFO 8304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:10:49.485  INFO 8304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:10:49.577  INFO 8304 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:10:49.577  INFO 8304 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1858 ms
+2017-07-26 17:10:49.798  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:10:49.798  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:10:49.799  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:10:49.799  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:10:49.799  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:10:49.799  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:10:49.799  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:10:49.800  INFO 8304 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:10:50.492  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c7b4321: startup date [Wed Jul 26 17:10:47 CST 2017]; root of context hierarchy
+2017-07-26 17:10:50.542  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:10:50.543  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:10:50.546  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:10:50.548  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:10:50.550  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:10:50.550  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:10:50.550  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:10:50.551  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:10:50.553  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:10:50.553  INFO 8304 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:10:50.582  INFO 8304 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:10:50.582  INFO 8304 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:10:50.619  INFO 8304 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:10:51.408  INFO 8304 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:10:51.572  INFO 8304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:10:51.630  INFO 8304 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:10:51.632  INFO 8304 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:10:51.637  INFO 8304 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:10:51.696  INFO 8304 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:10:51.702  INFO 8304 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.598 seconds (JVM running for 5.43)
+2017-07-26 17:11:40.171  INFO 11108 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 11108 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:11:40.173  INFO 11108 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:11:40.419  INFO 11108 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac155ae: startup date [Wed Jul 26 17:11:40 CST 2017]; root of context hierarchy
+2017-07-26 17:11:42.080  INFO 11108 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:11:42.089  INFO 11108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:11:42.090  INFO 11108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:11:42.179  INFO 11108 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:11:42.179  INFO 11108 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1767 ms
+2017-07-26 17:11:42.399  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:11:42.400  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:11:42.401  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:11:42.401  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:11:42.401  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:11:42.402  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:11:42.402  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:11:42.403  INFO 11108 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:11:43.075  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac155ae: startup date [Wed Jul 26 17:11:40 CST 2017]; root of context hierarchy
+2017-07-26 17:11:43.124  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:11:43.125  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:11:43.128  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:11:43.130  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:11:43.131  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:11:43.132  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:11:43.132  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:11:43.132  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:11:43.135  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:11:43.135  INFO 11108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:11:43.163  INFO 11108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:11:43.163  INFO 11108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:11:43.199  INFO 11108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:11:43.973  INFO 11108 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:11:44.129  INFO 11108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:11:44.179  INFO 11108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:11:44.181  INFO 11108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:11:44.186  INFO 11108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:11:44.244  INFO 11108 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:11:44.249  INFO 11108 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.417 seconds (JVM running for 5.194)
+2017-07-26 17:13:16.418  INFO 8164 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 8164 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:13:16.419  INFO 8164 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:13:16.705  INFO 8164 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a36b98d: startup date [Wed Jul 26 17:13:16 CST 2017]; root of context hierarchy
+2017-07-26 17:13:18.855  INFO 8164 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:13:18.864  INFO 8164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:13:18.865  INFO 8164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:13:18.959  INFO 8164 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:13:18.960  INFO 8164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2259 ms
+2017-07-26 17:13:19.198  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:13:19.199  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:13:19.199  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:13:19.199  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:13:19.199  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:13:19.200  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:13:19.200  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:13:19.201  INFO 8164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:13:19.873  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a36b98d: startup date [Wed Jul 26 17:13:16 CST 2017]; root of context hierarchy
+2017-07-26 17:13:19.924  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:13:19.926  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:13:19.928  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:13:19.929  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:13:19.931  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:13:19.931  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:13:19.932  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:13:19.933  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:13:19.935  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:13:19.935  INFO 8164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:13:19.965  INFO 8164 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:13:19.966  INFO 8164 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:13:20.004  INFO 8164 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:13:20.798  INFO 8164 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:13:20.965  INFO 8164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:13:21.020  INFO 8164 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:13:21.022  INFO 8164 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:13:21.026  INFO 8164 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:13:21.083  INFO 8164 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:13:21.088  INFO 8164 --- [restartedMain] com.zxxz.lv.App                          : Started App in 5.062 seconds (JVM running for 5.84)
+2017-07-26 17:14:10.870  INFO 6148 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 6148 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:14:10.871  INFO 6148 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:14:11.140  INFO 6148 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:14:11 CST 2017]; root of context hierarchy
+2017-07-26 17:14:12.737  INFO 6148 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:14:12.746  INFO 6148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:14:12.747  INFO 6148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:14:12.837  INFO 6148 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:14:12.838  INFO 6148 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1702 ms
+2017-07-26 17:14:13.061  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:14:13.062  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:14:13.062  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:14:13.062  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:14:13.062  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:14:13.063  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:14:13.063  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:14:13.064  INFO 6148 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:14:13.728  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:14:11 CST 2017]; root of context hierarchy
+2017-07-26 17:14:13.777  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:14:13.778  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:14:13.780  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:14:13.782  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:14:13.783  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:14:13.784  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:14:13.784  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:14:13.785  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:14:13.787  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:14:13.788  INFO 6148 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:14:13.815  INFO 6148 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:14:13.815  INFO 6148 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:14:13.854  INFO 6148 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:14:14.617  INFO 6148 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:14:14.776  INFO 6148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:14:14.830  INFO 6148 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:14:14.832  INFO 6148 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:14:14.837  INFO 6148 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:14:14.892  INFO 6148 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:14:14.898  INFO 6148 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.379 seconds (JVM running for 5.143)
+2017-07-26 17:15:08.675  INFO 10760 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 10760 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:15:08.676  INFO 10760 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:15:08.964  INFO 10760 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dbb5a6e: startup date [Wed Jul 26 17:15:08 CST 2017]; root of context hierarchy
+2017-07-26 17:15:11.154  INFO 10760 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:15:11.165  INFO 10760 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:15:11.166  INFO 10760 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:15:11.275  INFO 10760 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:15:11.275  INFO 10760 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2317 ms
+2017-07-26 17:15:11.498  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:15:11.499  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:15:11.499  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:15:11.500  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:15:11.500  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:15:11.500  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:15:11.500  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:15:11.502  INFO 10760 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:15:12.232  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dbb5a6e: startup date [Wed Jul 26 17:15:08 CST 2017]; root of context hierarchy
+2017-07-26 17:15:12.288  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:15:12.289  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:15:12.291  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:15:12.293  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:12.294  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:15:12.294  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:12.295  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:12.295  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:12.297  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:15:12.298  INFO 10760 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:12.325  INFO 10760 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:12.325  INFO 10760 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:12.364  INFO 10760 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:13.159  INFO 10760 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:15:13.319  INFO 10760 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:15:13.372  INFO 10760 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:15:13.373  INFO 10760 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:15:13.378  INFO 10760 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:15:13.391  INFO 10760 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:15:13.440  INFO 10760 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:15:13.445  INFO 10760 --- [restartedMain] com.zxxz.lv.App                          : Started App in 5.124 seconds (JVM running for 5.899)
+2017-07-26 17:15:17.580  INFO 11256 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 11256 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:15:17.582  INFO 11256 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:15:17.862  INFO 11256 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a1ec2c: startup date [Wed Jul 26 17:15:17 CST 2017]; root of context hierarchy
+2017-07-26 17:15:20.503  INFO 11256 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:15:20.514  INFO 11256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:15:20.515  INFO 11256 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:15:20.607  INFO 11256 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:15:20.608  INFO 11256 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2750 ms
+2017-07-26 17:15:20.829  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:15:20.830  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:15:20.830  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:15:20.830  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:15:20.830  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:15:20.831  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:15:20.831  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:15:20.832  INFO 11256 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:15:21.539  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a1ec2c: startup date [Wed Jul 26 17:15:17 CST 2017]; root of context hierarchy
+2017-07-26 17:15:21.595  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:15:21.596  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:15:21.599  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:15:21.600  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:21.602  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:15:21.602  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:21.602  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:21.603  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:21.605  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:15:21.605  INFO 11256 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:15:21.633  INFO 11256 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:21.633  INFO 11256 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:21.670  INFO 11256 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:15:22.449  INFO 11256 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:15:22.616  INFO 11256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:15:22.675  INFO 11256 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:15:22.676  INFO 11256 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:15:22.682  INFO 11256 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:15:22.694  INFO 11256 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:15:22.746  INFO 11256 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:15:22.751  INFO 11256 --- [restartedMain] com.zxxz.lv.App                          : Started App in 5.602 seconds (JVM running for 6.317)
+2017-07-26 17:15:30.003  INFO 11256 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:43,name:pool-1-thread-1
+2017-07-26 17:15:40.000  INFO 11256 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:43,name:pool-1-thread-1
+2017-07-26 17:15:50.001  INFO 11256 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:43,name:pool-1-thread-1
+2017-07-26 17:17:23.748  INFO 10524 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 10524 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:17:23.749  INFO 10524 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:17:24.011  INFO 10524 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f337e2a: startup date [Wed Jul 26 17:17:24 CST 2017]; root of context hierarchy
+2017-07-26 17:17:25.701  INFO 10524 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:17:25.710  INFO 10524 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:17:25.712  INFO 10524 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:17:25.815  INFO 10524 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:17:25.816  INFO 10524 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1809 ms
+2017-07-26 17:17:26.032  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:17:26.032  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:17:26.033  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:17:26.033  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:17:26.033  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:17:26.033  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:17:26.034  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:17:26.035  INFO 10524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:17:26.699  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f337e2a: startup date [Wed Jul 26 17:17:24 CST 2017]; root of context hierarchy
+2017-07-26 17:17:26.750  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:17:26.751  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:17:26.754  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:17:26.755  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:17:26.757  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:17:26.758  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:17:26.758  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:17:26.759  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:17:26.761  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:17:26.761  INFO 10524 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:17:26.790  INFO 10524 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:17:26.791  INFO 10524 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:17:26.828  INFO 10524 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:17:27.598  INFO 10524 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:17:27.757  INFO 10524 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:17:27.822  INFO 10524 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:17:27.824  INFO 10524 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:17:27.829  INFO 10524 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:17:27.887  INFO 10524 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:17:27.892  INFO 10524 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.518 seconds (JVM running for 5.278)
+2017-07-26 17:18:34.490  INFO 1228 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 1228 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:18:34.491  INFO 1228 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:18:34.812  INFO 1228 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69cb4ddf: startup date [Wed Jul 26 17:18:34 CST 2017]; root of context hierarchy
+2017-07-26 17:18:36.531  INFO 1228 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:18:36.540  INFO 1228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:18:36.541  INFO 1228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:18:36.632  INFO 1228 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:18:36.632  INFO 1228 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1824 ms
+2017-07-26 17:18:36.867  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:18:36.868  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:18:36.868  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:18:36.868  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:18:36.869  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:18:36.869  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:18:36.869  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:18:36.870  INFO 1228 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:18:37.546  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69cb4ddf: startup date [Wed Jul 26 17:18:34 CST 2017]; root of context hierarchy
+2017-07-26 17:18:37.596  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:18:37.597  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:18:37.599  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:18:37.600  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:37.602  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:18:37.602  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:37.602  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:37.603  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:37.605  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:18:37.606  INFO 1228 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:37.636  INFO 1228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:37.636  INFO 1228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:37.674  INFO 1228 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:38.480  INFO 1228 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:18:38.648  INFO 1228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:18:38.704  INFO 1228 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:18:38.706  INFO 1228 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:18:38.711  INFO 1228 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:18:38.722  INFO 1228 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:18:38.784  INFO 1228 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:18:38.789  INFO 1228 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.651 seconds (JVM running for 5.379)
+2017-07-26 17:18:55.873  INFO 6156 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 6156 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:18:55.874  INFO 6156 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:18:56.128  INFO 6156 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@26bfafd7: startup date [Wed Jul 26 17:18:56 CST 2017]; root of context hierarchy
+2017-07-26 17:18:57.829  INFO 6156 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:18:57.838  INFO 6156 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:18:57.838  INFO 6156 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:18:57.958  INFO 6156 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:18:57.958  INFO 6156 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1834 ms
+2017-07-26 17:18:58.183  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:18:58.184  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:18:58.184  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:18:58.184  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:18:58.184  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:18:58.185  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:18:58.185  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:18:58.186  INFO 6156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:18:58.866  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@26bfafd7: startup date [Wed Jul 26 17:18:56 CST 2017]; root of context hierarchy
+2017-07-26 17:18:58.914  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:18:58.915  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:18:58.917  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:18:58.919  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:58.920  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:18:58.920  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:58.921  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:58.922  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:58.924  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:18:58.924  INFO 6156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:18:58.952  INFO 6156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:58.953  INFO 6156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:58.992  INFO 6156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:18:59.781  INFO 6156 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:18:59.941  INFO 6156 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:18:59.998  INFO 6156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:19:00.001  INFO 6156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:19:00.005  INFO 6156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:19:00.016  INFO 6156 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:19:00.068  INFO 6156 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:19:00.073  INFO 6156 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.573 seconds (JVM running for 5.278)
+2017-07-26 17:19:10.002  INFO 6156 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:42,name:pool-1-thread-1
+2017-07-26 17:19:21.195  INFO 9676 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 9676 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:19:21.196  INFO 9676 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:19:21.515  INFO 9676 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28692c2a: startup date [Wed Jul 26 17:19:21 CST 2017]; root of context hierarchy
+2017-07-26 17:19:23.302  INFO 9676 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:19:23.311  INFO 9676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:19:23.312  INFO 9676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:19:23.404  INFO 9676 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:19:23.404  INFO 9676 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1893 ms
+2017-07-26 17:19:23.637  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:19:23.637  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:19:23.638  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:19:23.638  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:19:23.638  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:19:23.638  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:19:23.639  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:19:23.640  INFO 9676 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:19:24.322  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28692c2a: startup date [Wed Jul 26 17:19:21 CST 2017]; root of context hierarchy
+2017-07-26 17:19:24.370  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:19:24.372  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:19:24.374  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:19:24.375  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:19:24.377  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:19:24.377  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:19:24.377  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:19:24.378  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:19:24.380  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:19:24.381  INFO 9676 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:19:24.408  INFO 9676 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:19:24.409  INFO 9676 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:19:24.447  INFO 9676 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:19:25.235  INFO 9676 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:19:25.397  INFO 9676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:19:25.452  INFO 9676 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:19:25.454  INFO 9676 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:19:25.459  INFO 9676 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:19:25.471  INFO 9676 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:19:25.524  INFO 9676 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:19:25.530  INFO 9676 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.813 seconds (JVM running for 5.59)
+2017-07-26 17:19:30.003  INFO 9676 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:42,name:pool-1-thread-1
+2017-07-26 17:21:49.123  INFO 10100 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 10100 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:21:49.125  INFO 10100 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:21:49.379  INFO 10100 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28692c2a: startup date [Wed Jul 26 17:21:49 CST 2017]; root of context hierarchy
+2017-07-26 17:21:51.065  INFO 10100 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:21:51.075  INFO 10100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:21:51.076  INFO 10100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:21:51.184  INFO 10100 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:21:51.185  INFO 10100 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1810 ms
+2017-07-26 17:21:51.403  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:21:51.403  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:21:51.404  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:21:51.404  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:21:51.404  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:21:51.404  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:21:51.405  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:21:51.406  INFO 10100 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:21:52.078  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28692c2a: startup date [Wed Jul 26 17:21:49 CST 2017]; root of context hierarchy
+2017-07-26 17:21:52.128  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:21:52.129  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:21:52.132  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:21:52.134  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:21:52.135  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:21:52.136  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:21:52.136  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:21:52.137  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:21:52.139  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:21:52.140  INFO 10100 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:21:52.168  INFO 10100 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:21:52.168  INFO 10100 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:21:52.207  INFO 10100 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:21:52.984  INFO 10100 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:21:53.146  INFO 10100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:21:53.200  INFO 10100 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:21:53.202  INFO 10100 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:21:53.206  INFO 10100 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:21:53.221  INFO 10100 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:21:53.280  INFO 10100 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:21:53.287  INFO 10100 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.521 seconds (JVM running for 5.281)
+2017-07-26 17:21:55.002  INFO 10100 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:41,name:pool-1-thread-1
+2017-07-26 17:22:00.027  INFO 10100 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeFileDownLoadTask 定时任务1:41,name:pool-1-thread-1
+2017-07-26 17:22:00.028  INFO 10100 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:41,name:pool-1-thread-1
+2017-07-26 17:22:05.001  INFO 10100 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:41,name:pool-1-thread-1
+2017-07-26 17:22:10.001  INFO 10100 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:41,name:pool-1-thread-1
+2017-07-26 17:48:40.897  INFO 7296 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 7296 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:48:40.899  INFO 7296 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:48:41.158  INFO 7296 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:48:41 CST 2017]; root of context hierarchy
+2017-07-26 17:48:42.853  INFO 7296 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:48:42.862  INFO 7296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:48:42.863  INFO 7296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:48:42.967  INFO 7296 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:48:42.968  INFO 7296 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1814 ms
+2017-07-26 17:48:43.201  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:48:43.202  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:48:43.202  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:48:43.202  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:48:43.202  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:48:43.203  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:48:43.203  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:48:43.204  INFO 7296 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:48:43.887  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:48:41 CST 2017]; root of context hierarchy
+2017-07-26 17:48:43.938  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:48:43.939  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:48:43.941  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:48:43.943  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:48:43.944  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:48:43.944  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:48:43.945  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:48:43.946  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:48:43.948  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:48:43.949  INFO 7296 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:48:43.978  INFO 7296 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:48:43.978  INFO 7296 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:48:44.017  INFO 7296 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:48:44.856  INFO 7296 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:48:45.020  INFO 7296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:48:45.074  INFO 7296 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:48:45.076  INFO 7296 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:48:45.082  INFO 7296 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:48:45.094  INFO 7296 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-07-26 17:48:45.142  INFO 7296 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:48:45.146  INFO 7296 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.571 seconds (JVM running for 5.285)
+2017-07-26 17:48:50.072  INFO 7296 --- [pool-1-thread-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2017-07-26 17:48:50.369  INFO 7296 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:42,name:pool-1-thread-1
+2017-07-26 17:48:55.020  INFO 7296 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:42,name:pool-1-thread-1
+2017-07-26 17:49:00.018  INFO 7296 --- [pool-1-thread-1] com.zxxz.lv.job.ScheduledTest            : ScheduledTest.executeUploadTask 定时任务2:42,name:pool-1-thread-1
+2017-07-26 17:50:05.070  INFO 6172 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 6172 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:50:05.071  INFO 6172 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:50:05.310  INFO 6172 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:50:05 CST 2017]; root of context hierarchy
+2017-07-26 17:50:06.863  INFO 6172 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:50:06.872  INFO 6172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:50:06.873  INFO 6172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:50:06.977  INFO 6172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:50:06.978  INFO 6172 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1671 ms
+2017-07-26 17:50:07.195  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:50:07.196  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:50:07.196  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:50:07.196  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:50:07.196  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:50:07.197  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:50:07.197  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:50:07.198  INFO 6172 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:50:07.847  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@749f334f: startup date [Wed Jul 26 17:50:05 CST 2017]; root of context hierarchy
+2017-07-26 17:50:07.897  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:50:07.898  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:50:07.900  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:50:07.902  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:50:07.903  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:50:07.904  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:50:07.904  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:50:07.905  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:50:07.907  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:50:07.908  INFO 6172 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:50:07.934  INFO 6172 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:50:07.934  INFO 6172 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:50:07.970  INFO 6172 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:50:08.731  INFO 6172 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:50:08.897  INFO 6172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:50:08.948  INFO 6172 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:50:08.950  INFO 6172 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:50:08.955  INFO 6172 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:50:09.004  INFO 6172 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:50:09.008  INFO 6172 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.299 seconds (JVM running for 5.06)
+2017-07-26 17:50:14.990  INFO 6172 --- [http-nio-9013-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-26 17:50:14.991  INFO 6172 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-26 17:50:15.016  INFO 6172 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-07-26 17:50:15.046 ERROR 6172 --- [http-nio-9013-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.zxxz.lv.interceptor.MyInterceptor.preHandle(MyInterceptor.java:23) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.0.11.jar:1.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at com.zxxz.lv.filter.CrossDomainFilter.doFilter(CrossDomainFilter.java:35) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+
+2017-07-26 17:50:15.059 ERROR 6172 --- [http-nio-9013-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+java.lang.NullPointerException: null
+	at com.zxxz.lv.interceptor.MyInterceptor.preHandle(MyInterceptor.java:23) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+
+2017-07-26 17:50:15.061 ERROR 6172 --- [http-nio-9013-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311) ~[tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.15.jar:8.5.15]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+Caused by: java.lang.NullPointerException: null
+	at com.zxxz.lv.interceptor.MyInterceptor.preHandle(MyInterceptor.java:23) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 26 common frames omitted
+
+2017-07-26 17:51:01.645  INFO 6160 --- [restartedMain] com.zxxz.lv.App                          : Starting App on LV_PC with PID 6160 (D:\idea_workspace\lv_springboot\target\classes started by Lv in D:\idea_workspace\lv_springboot)
+2017-07-26 17:51:01.646  INFO 6160 --- [restartedMain] com.zxxz.lv.App                          : No active profile set, falling back to default profiles: default
+2017-07-26 17:51:01.923  INFO 6160 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a7ed164: startup date [Wed Jul 26 17:51:01 CST 2017]; root of context hierarchy
+2017-07-26 17:51:03.578  INFO 6160 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9013 (http)
+2017-07-26 17:51:03.589  INFO 6160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-07-26 17:51:03.590  INFO 6160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-07-26 17:51:03.681  INFO 6160 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-07-26 17:51:03.681  INFO 6160 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1762 ms
+2017-07-26 17:51:03.907  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-07-26 17:51:03.908  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-07-26 17:51:03.908  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-07-26 17:51:03.909  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-07-26 17:51:03.909  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'crossDomainFilter' to urls: [/*]
+2017-07-26 17:51:03.909  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2017-07-26 17:51:03.909  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-07-26 17:51:03.910  INFO 6160 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2017-07-26 17:51:04.596  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a7ed164: startup date [Wed Jul 26 17:51:01 CST 2017]; root of context hierarchy
+2017-07-26 17:51:04.644  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zxxz.lv.App.entry()
+2017-07-26 17:51:04.645  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.zxxz.lv.controller.HomeController.index()
+2017-07-26 17:51:04.648  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather]}" onto public java.lang.String com.zxxz.lv.controller.MainController.index()
+2017-07-26 17:51:04.650  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zxxz],methods=[GET]}" onto public java.lang.String com.zxxz.lv.controller.MainController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:51:04.651  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/text]}" onto public java.lang.String com.zxxz.lv.controller.UserController.get(org.springframework.ui.Model)
+2017-07-26 17:51:04.651  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/get]}" onto public java.lang.String com.zxxz.lv.controller.UserController.getById(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:51:04.652  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login]}" onto public java.lang.String com.zxxz.lv.controller.UserController.login(org.springframework.ui.Model,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:51:04.653  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/weather/queryWeather/v1.0],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.zxxz.lv.controller.WeatherController.getWeatherMsg(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:51:04.655  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-07-26 17:51:04.655  INFO 6160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-07-26 17:51:04.686  INFO 6160 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:51:04.686  INFO 6160 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:51:04.721  INFO 6160 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-26 17:51:05.517  INFO 6160 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-07-26 17:51:05.675  INFO 6160 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-07-26 17:51:05.735  INFO 6160 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-07-26 17:51:05.737  INFO 6160 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-07-26 17:51:05.741  INFO 6160 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-07-26 17:51:05.794  INFO 6160 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9013 (http)
+2017-07-26 17:51:05.800  INFO 6160 --- [restartedMain] com.zxxz.lv.App                          : Started App in 4.497 seconds (JVM running for 5.201)
+2017-07-26 17:51:09.848  INFO 6160 --- [http-nio-9013-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-07-26 17:51:09.848  INFO 6160 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-07-26 17:51:09.890  INFO 6160 --- [http-nio-9013-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2017-07-26 17:51:09.974  INFO 6160 --- [http-nio-9013-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited

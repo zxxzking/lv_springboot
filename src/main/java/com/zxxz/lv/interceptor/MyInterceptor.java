@@ -41,6 +41,10 @@ public class MyInterceptor implements HandlerInterceptor{
 
     }
 
+    /**
+     * 拦截器注入service 在webMvcConfiguration类中传入service
+     * @param userService
+     */
     public MyInterceptor(UserService userService) {
         this.userService = userService;
     }
