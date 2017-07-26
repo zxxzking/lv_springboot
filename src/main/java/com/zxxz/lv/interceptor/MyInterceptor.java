@@ -20,7 +20,8 @@ public class MyInterceptor implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         UserInfo user = userService.getById(2);
-        System.out.println(user.getUsername());
+        user = userService.getByName("test2");
+        System.out.println(user.getPassword());
         String servletPath = httpServletRequest.getServletPath();
         System.out.println(servletPath);
         return true;

@@ -44,5 +44,4 @@ mybatis:
   type-aliases-package: com.zxxz.lv.entity
   mapper-locations: classpath:mapper/*.xml
 logging:
-  path: /idea_workspace/log
-  file: spring.log
+  file: /idea_workspace/log/spring.log

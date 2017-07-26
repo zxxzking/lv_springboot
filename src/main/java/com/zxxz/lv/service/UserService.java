@@ -4,4 +4,6 @@ import com.zxxz.lv.entity.UserInfo;
 
 public interface UserService {
     UserInfo getById(int id);
+
+    UserInfo getByName(String name);
 }

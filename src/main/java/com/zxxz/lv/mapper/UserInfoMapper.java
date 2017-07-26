@@ -27,10 +27,15 @@ package com.zxxz.lv.mapper;
 
 import com.zxxz.lv.entity.UserInfo;
 import com.zxxz.lv.utils.MyMapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 /**
- * @author liuzh_3nofxnp
- * @since 2016-01-22 22:17
+ *
  */
 public interface UserInfoMapper extends MyMapper<UserInfo> {
+    @Select("select * from user_info where username = #{userName}")
+    UserInfo getByName(@Param("userName")String userName);
+
+
 }

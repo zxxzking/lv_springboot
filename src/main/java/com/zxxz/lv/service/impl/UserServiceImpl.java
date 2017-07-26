@@ -15,6 +15,8 @@ public class UserServiceImpl implements UserService {
     public UserInfo getById(int id){
         return userInfoMapper.selectByPrimaryKey(id);
     }
-
-
+    @Override
+    public UserInfo getByName(String name){
+        return userInfoMapper.getByName(name);
+    }
 }
