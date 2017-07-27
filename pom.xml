@@ -30,6 +30,12 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- 配置处理器 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -57,12 +63,6 @@
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
 
-
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
@@ -80,11 +80,7 @@
       <artifactId>jackson-module-parameter-names</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>druid</artifactId>
-      <version>1.0.11</version>
-    </dependency>
+
 
     <!--mybatis-->
     <dependency>
@@ -105,25 +101,25 @@
       <version>1.1.2</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
-    </dependency>
 
+
+    <!-- 更好的兼容springboot的druid数据源  相当于原来的druid-->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.0</version>
     </dependency>
+    <!-- mysql数据库驱动 -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
     </dependency>
-    <dependency>
+
+    <!-- 数据库连接池 -->
+    <!--<dependency>
       <groupId>commons-dbcp</groupId>
       <artifactId>commons-dbcp</artifactId>
-    </dependency>
+    </dependency>-->
 
 
 
@@ -161,11 +157,6 @@
       <optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
     </dependency>
 
-    <!-- redis-->
-   <!-- <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-redis</artifactId>
-    </dependency>-->
   </dependencies>
 
 
@@ -176,38 +167,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <fork>true</fork><!-- 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>springloaded</artifactId>
-            <version>1.2.5.RELEASE</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <plugin>
-        <groupId>org.mybatis.generator</groupId>
-        <artifactId>mybatis-generator-maven-plugin</artifactId>
-        <version>1.3.2</version>
-        <configuration>
-          <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
-          <overwrite>true</overwrite>
-          <verbose>true</verbose>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
-            <version>3.4.0</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>

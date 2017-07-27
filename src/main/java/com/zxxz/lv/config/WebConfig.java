@@ -1,7 +1,9 @@
 package com.zxxz.lv.config;
 
 import com.zxxz.lv.filter.CrossDomainFilter;
+import com.zxxz.lv.listener.LogFileListener;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,4 +21,16 @@ public class WebConfig {
         registrationBean.addUrlPatterns("/*");
         return registrationBean;
     }
+    /*
+    注册一个监听器
+     */
+    @Bean
+    public ServletListenerRegistrationBean logFileListenerBean(){
+        ServletListenerRegistrationBean bean = new ServletListenerRegistrationBean();
+        LogFileListener listener = new LogFileListener();
+        bean.setListener(listener);
+        return bean;
+    }
+
+
 }
