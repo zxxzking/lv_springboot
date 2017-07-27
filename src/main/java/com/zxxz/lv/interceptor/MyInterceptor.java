@@ -19,11 +19,7 @@ public class MyInterceptor implements HandlerInterceptor{
      */
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        UserInfo user = userService.getById(2);
-        user = userService.getByName("test2");
-        System.out.println(user.getPassword());
-        String servletPath = httpServletRequest.getServletPath();
-        System.out.println(servletPath);
+
         return true;
     }
     /*
@@ -31,8 +27,7 @@ public class MyInterceptor implements HandlerInterceptor{
      */
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        String userName = (String) httpServletRequest.getAttribute("userName");
-        System.out.println(userName);
+
     }
     /*
     在整个请求处理结束后调用（dispatcherServlet渲染视图后）

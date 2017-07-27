@@ -9,11 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by Lv on 2017/7/21.
  */
-@RestController
+@Controller
 public class HomeController {
 
     @RequestMapping(value = "/index")
     public String index(){
         return "Hello World";
+    }
+
+    @RequestMapping(value = "/login")
+    public String toLogin(){
+        return "login";
+    }
+    @RequestMapping("/weather")
+    public String weather() {
+        return "weather";
     }
 }

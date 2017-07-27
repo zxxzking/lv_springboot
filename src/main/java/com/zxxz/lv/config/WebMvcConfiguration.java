@@ -1,5 +1,6 @@
 package com.zxxz.lv.config;
 
+import com.zxxz.lv.interceptor.LoginInterceptor;
 import com.zxxz.lv.interceptor.MyInterceptor;
 import com.zxxz.lv.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
     //配置拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry){
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/index");
         registry.addInterceptor(new MyInterceptor(userService)).addPathPatterns("/*");
         super.addInterceptors(registry);
     }
