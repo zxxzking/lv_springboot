@@ -25,13 +25,14 @@
 <body>
 
 <div class="page-container">
-    <h1>Login</h1>
-    <form action="/user/login" method="post">
+    <h1>Regist</h1>
+    <form action="/user/register" method="post">
         <input type="text" name="username" class="username" placeholder="Username" />
         <input type="password" name="password" class="password" placeholder="Password" />
-        <button type="submit">Sign me in</button>
-        <div class="register">No Account?Go to <a href="toRegister">Regist</a>!</div>
+        <input type="password" name="password2" class="password2" placeholder="Password" />
+        <button type="submit">Regist Now!</button>
         <div class="error"><span>+</span></div>
+        <div class="tip"><span>两次输入密码不匹配</span></div>
     </form>
 </div>
 <!-- Javascript -->

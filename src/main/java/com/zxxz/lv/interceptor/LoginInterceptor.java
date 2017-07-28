@@ -6,13 +6,21 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.Enumeration;
 
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         UserInfo user = (UserInfo) request.getSession().getAttribute("user");
+        HttpSession session = request.getSession();
+        Enumeration<String> attributeNames = session.getAttributeNames();
+        while (attributeNames.hasMoreElements()){
+            String name = attributeNames.nextElement().toString();
+            System.out.println(name);
+        }
         if(null == user){
-            response.sendRedirect("login");
+            response.sendRedirect("toLogin");
             return false;
         }
 

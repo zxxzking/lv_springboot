@@ -12,17 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/index")
-    public String index(){
-        return "Hello World";
-    }
-
-    @RequestMapping(value = "/login")
+    @RequestMapping(value = "/toLogin")
     public String toLogin(){
         return "login";
     }
-    @RequestMapping("/weather")
-    public String weather() {
-        return "weather";
+    @RequestMapping(value = "toRegister")
+    public String toRegister(){
+        return "register";
     }
+
+    @RequestMapping(value = "index")
+    public String toIndex(){
+        return "index";
+    }
+
+
 }

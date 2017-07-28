@@ -21,25 +21,15 @@ public class UserController {
 
     @Resource
     private UserService userService;
+    @RequestMapping(value = "register")
+    public String userRegister(HttpServletRequest request,HttpServletResponse response){
 
 
-    @RequestMapping(value = "/get")
-    @ResponseBody
-    public String getById(HttpServletRequest request, HttpServletResponse response){
+        return null;
+    }
 
-        return userService.getById(2).toString();
-    }
-    @RequestMapping(value = "text")
-    public String get(Model model){
-        UserInfo userInfo = userService.getById(3);
-        model.addAttribute("name",userInfo.getUsername());
-        return "text";
-    }
-    @RequestMapping(value = "login")
-    public String login(Model model,HttpServletRequest request,HttpServletResponse response){
-        String userName = request.getParameter("userName");
-        String passWord = request.getParameter("passWord");
-        model.addAttribute("userName",userName);
-        return "";
-    }
+
+
+
+
 }
