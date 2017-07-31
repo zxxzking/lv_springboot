@@ -26,13 +26,14 @@
 
 <div class="page-container">
     <h1>Regist</h1>
-    <form action="/user/register" method="post">
-        <input type="text" name="username" class="username" placeholder="Username" />
+    <form action="/user/register" method="post" id="form">
+        <input type="text" name="username" class="username" placeholder="Username" id="username"/>
         <input type="password" name="password" class="password" placeholder="Password" />
         <input type="password" name="password2" class="password2" placeholder="Password" />
         <button type="submit">Regist Now!</button>
         <div class="error"><span>+</span></div>
         <div class="tip"><span>两次输入密码不匹配</span></div>
+        <div class="tip2"><span>该用户名已存在</span></div>
     </form>
 </div>
 <!-- Javascript -->
@@ -40,6 +41,7 @@
 <script src="/static/js/supersized.3.2.7.min.js"></script>
 <script src="/static/js/supersized-init.js"></script>
 <script src="/static/js/scripts.js"></script>
+<script src="/static/js/register.js"></script>
 
 </body>
 

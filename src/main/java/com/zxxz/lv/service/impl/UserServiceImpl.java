@@ -7,6 +7,8 @@ import com.zxxz.lv.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Resource
@@ -17,6 +19,26 @@ public class UserServiceImpl implements UserService {
     }
     @Override
     public UserInfo getByName(String name){
-        return userInfoMapper.getByName(name);
+        return userInfoMapper.getByName(name).get(0);
     }
+
+    @Override
+    public int saveUser(UserInfo userInfo){
+      return   userInfoMapper.insert(userInfo);
+    }
+
+    @Override
+    public boolean checkUserName(String userName){
+        List list = userInfoMapper.getByName(userName);
+        if(list == null||list.isEmpty()){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    @Override
+    public List<UserInfo> count(String userName){
+        return userInfoMapper.count(userName);
+    }
+
 }

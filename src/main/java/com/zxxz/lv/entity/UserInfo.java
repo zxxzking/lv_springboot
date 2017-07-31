@@ -39,6 +39,7 @@ public class UserInfo extends BaseEntity {
     private String email;
     private String tel;
 
+
     public String getUsername() {
         return username;
     }

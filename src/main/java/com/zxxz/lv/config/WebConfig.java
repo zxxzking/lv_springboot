@@ -7,6 +7,9 @@ import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * servlet的一些配置
+ */
 @Configuration
 public class WebConfig {
     /**
