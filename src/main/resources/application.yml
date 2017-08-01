@@ -34,14 +34,18 @@ spring:
 
 common:
   jdSecret: 2b4270dc0adfe881f3e301d72346b00c
+
+
 server:
   port: 9013
   tomcat:
     uri-encoding: utf-8
   #error: /templates/error
 
-mybatis:
-  type-aliases-package: com.zxxz.lv.entity
-  mapper-locations: classpath:mapper/*.xml
+
+
 logging:
   file: /idea_workspace/log/spring.log
+mybatis:
+  mapper-locations: classpath:*/*Mapper.xml
+  type-aliases-package: com.zxxz.lv.entity

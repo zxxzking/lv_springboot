@@ -25,6 +25,7 @@
 package com.zxxz.lv.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * 基础信息
@@ -32,7 +33,7 @@ import javax.persistence.*;
  * @author liuzh
  * @since 2016-01-31 21:42
  */
-public class BaseEntity {
+public class BaseEntity implements Serializable{
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -63,5 +64,26 @@ public class UserController {
         request.getSession().setAttribute("user",userInfo);
         return map;
     }
+
+    @RequestMapping(value = "test1")
+    @ResponseBody
+    public Map test(HttpServletRequest request,HttpServletResponse response){
+        String username = request.getParameter("username");
+        Map map = new HashMap<String,Object>();
+        List<UserInfo> count = userService.count(username);
+        map.put("count",count);
+        return map;
+    }
+
+    @RequestMapping(value = "test2")
+    @ResponseBody
+    public Map test2(HttpServletRequest request,HttpServletResponse response){
+        String username = request.getParameter("username");
+        Map map = new HashMap<String,Object>();
+        List<UserInfo> count = userService.get(username);
+        map.put("count",count);
+        return map;
+    }
+
 
 }

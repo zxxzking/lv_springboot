@@ -15,4 +15,6 @@ public interface UserService {
     boolean checkUserName(String userName);
 
     List<UserInfo> count(String userName);
+
+    List<UserInfo> get(String userName);
 }

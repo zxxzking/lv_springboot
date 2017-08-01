@@ -35,9 +35,21 @@ public class UserInfo extends BaseEntity {
     private String password;
     private String usertype;
     private Integer enabled;
+    private String realname;
     private String qq;
     private String email;
     private String tel;
+
+
+
+
+    public String getRealname() {
+        return realname;
+    }
+
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
 
 
     public String getUsername() {

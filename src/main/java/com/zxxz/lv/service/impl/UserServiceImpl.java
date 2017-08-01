@@ -2,7 +2,6 @@ package com.zxxz.lv.service.impl;
 
 import com.zxxz.lv.entity.UserInfo;
 import com.zxxz.lv.mapper.UserInfoMapper;
-import com.zxxz.lv.mapper.UserMapper;
 import com.zxxz.lv.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -13,19 +12,22 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Resource
     private UserInfoMapper userInfoMapper;
+
     @Override
-    public UserInfo getById(int id){
-        return userInfoMapper.selectByPrimaryKey(id);
+    public UserInfo getById(int id) {
+        return null;
     }
+
     @Override
     public UserInfo getByName(String name){
         return userInfoMapper.getByName(name).get(0);
     }
 
     @Override
-    public int saveUser(UserInfo userInfo){
-      return   userInfoMapper.insert(userInfo);
+    public int saveUser(UserInfo userInfo) {
+        return 0;
     }
+
 
     @Override
     public boolean checkUserName(String userName){
@@ -40,5 +42,8 @@ public class UserServiceImpl implements UserService {
     public List<UserInfo> count(String userName){
         return userInfoMapper.count(userName);
     }
+    @Override
+    public List<UserInfo> get(String userName){ return userInfoMapper.getByName(userName);}
+
 
 }

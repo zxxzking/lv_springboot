@@ -35,8 +35,8 @@ import java.util.List;
 /**
  *
  */
-public interface UserInfoMapper extends MyMapper<UserInfo> {
-    @Select("select * from user_info where username = #{userName}")
+public interface UserInfoMapper {
+    //@Select("select * from user_info where username = #{userName}")
     List<UserInfo> getByName(@Param("userName")String userName);
 
     List<UserInfo> count(@Param("userName")String userName);
