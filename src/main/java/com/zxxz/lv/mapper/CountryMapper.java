@@ -26,11 +26,9 @@ package com.zxxz.lv.mapper;
 
 
 import com.zxxz.lv.entity.Country;
-import com.zxxz.lv.utils.MyMapper;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 
-public interface CountryMapper extends MyMapper<Country> {
+
+public interface CountryMapper{
     Country getById(int id);
 
 }
