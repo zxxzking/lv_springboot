@@ -41,6 +41,15 @@ jQuery(document).ready(function() {
             });
             return false;
         }
+        $.ajax({
+            type:"post",
+            url:"/user/register",
+            async:true,
+            data:$("#form").serialize(),
+            success:function(res){
+                console.log(res)
+            }
+        });
     });
 
     $('.page-container form .username, .page-container form .password').keyup(function(){

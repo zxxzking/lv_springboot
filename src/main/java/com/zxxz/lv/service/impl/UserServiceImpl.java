@@ -25,6 +25,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int saveUser(UserInfo userInfo) {
+
+
+
+
         return 0;
     }
 
@@ -38,9 +42,14 @@ public class UserServiceImpl implements UserService {
             return false;
         }
     }
+
+
     @Override
-    public List<UserInfo> count(String userName){
-        return userInfoMapper.count(userName);
+    public List<UserInfo> count(String pageSize, String pageNum){
+        int pageS = Integer.valueOf(pageSize);
+        int pageN = Integer.valueOf(pageNum);
+        int index = (pageN-1)*pageS;
+        return userInfoMapper.queryAll(index,pageS);
     }
     @Override
     public List<UserInfo> get(String userName){ return userInfoMapper.getByName(userName);}

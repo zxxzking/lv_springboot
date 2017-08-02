@@ -9,12 +9,11 @@ public interface UserService {
 
     UserInfo getByName(String name);
 
-
     int saveUser(UserInfo userInfo);
 
     boolean checkUserName(String userName);
 
-    List<UserInfo> count(String userName);
+    List<UserInfo> count(String pageSize, String pageNum);
 
     List<UserInfo> get(String userName);
 }

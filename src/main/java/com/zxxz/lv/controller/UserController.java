@@ -68,9 +68,10 @@ public class UserController {
     @RequestMapping(value = "test1")
     @ResponseBody
     public Map test(HttpServletRequest request,HttpServletResponse response){
-        String username = request.getParameter("username");
+        String pageSize = request.getParameter("pageSize");
+        String pageNum = request.getParameter("pageNum");
         Map map = new HashMap<String,Object>();
-        List<UserInfo> count = userService.count(username);
+        List<UserInfo> count = userService.count(pageSize,pageNum);
         map.put("count",count);
         return map;
     }

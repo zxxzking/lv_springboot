@@ -41,4 +41,6 @@ public interface UserInfoMapper {
 
     List<UserInfo> count(@Param("userName")String userName);
 
+    List<UserInfo> queryAll(@Param("index") int index,@Param("pageSize") int pageSize);
+
 }

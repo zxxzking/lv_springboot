@@ -23,17 +23,4 @@ $(function(){
             }
         });
     })
-
-    $("#form").submit(function(){
-        $.ajax({
-            type:"post",
-            url:"/user/register",
-            async:true,
-            data:$("#form").serialize(),
-            success:function(res){
-               console.log(res)
-            }
-        });
-
-    })
 })

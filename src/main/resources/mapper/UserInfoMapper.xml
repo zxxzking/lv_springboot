@@ -22,4 +22,8 @@
         select * FROM user_info where username = #{userName}
     </select>
 
+    <select id="queryAll" resultMap="user" resultType="list">
+        select * FROM user_info limit #{index},#{pageSize}
+    </select>
+
 </mapper>
