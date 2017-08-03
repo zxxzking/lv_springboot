@@ -41,20 +41,7 @@ jQuery(document).ready(function() {
             });
             return false;
         }
-        $.ajax({
-            type:"post",
-            url:"/user/register",
-            async:true,
-            data:$("#form").serialize(),
-            success:function(res){
-                res = JSON.parse(res);
-                if(res.code == "0000"){
-                    window.location.href = "/index"
-                }else{
-                    alert(res.msg);
-                }
-            }
-        });
+
 
     });
 

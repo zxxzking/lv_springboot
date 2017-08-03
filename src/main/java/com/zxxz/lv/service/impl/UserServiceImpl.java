@@ -25,11 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int saveUser(UserInfo userInfo) {
-
-
-
-
-        return 0;
+        return userInfoMapper.saveUser(userInfo.getUsername(),userInfo.getPassword(),Integer.valueOf(userInfo.getUsertype()));
     }
 
 

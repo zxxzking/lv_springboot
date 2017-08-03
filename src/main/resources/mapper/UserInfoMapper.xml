@@ -26,4 +26,7 @@
         select * FROM user_info limit #{index},#{pageSize}
     </select>
 
+    <insert id="saveUser">
+        INSERT INTO user_info (username,password,usertype) VALUES (#{userName},#{passWord},#{userType})
+    </insert>
 </mapper>

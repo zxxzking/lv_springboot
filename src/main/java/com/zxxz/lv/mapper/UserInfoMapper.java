@@ -43,4 +43,5 @@ public interface UserInfoMapper {
 
     List<UserInfo> queryAll(@Param("index") int index,@Param("pageSize") int pageSize);
 
+    int saveUser(@Param("userName") String userName,@Param("passWord") String passWord,@Param("userType") int userType);
 }

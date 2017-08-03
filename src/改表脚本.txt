@@ -1,0 +1,14 @@
+ALTER TABLE  table_name
+ADD (`inserttime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '插入时间',
+
+  `updatetime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  `isactive` TINYINT(4) DEFAULT '1' COMMENT '逻辑删除'
+);
+
+ALTER TABLE table_name
+ADD INDEX `ix_inserttime` (`inserttime`),
+
+ADD INDEX `ix_updatetime` (`updatetime`),
+
+ADD INDEX `ix_isactive` (`isactive`);

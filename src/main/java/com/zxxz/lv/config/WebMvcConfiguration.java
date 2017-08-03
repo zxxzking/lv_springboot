@@ -16,10 +16,10 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
     private UserService userService;
 
     //过滤静态资源
-    @Override
+    /*@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-    }
+    }*/
 
     //配置拦截器
     @Override
