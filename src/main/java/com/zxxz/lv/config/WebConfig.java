@@ -2,10 +2,13 @@ package com.zxxz.lv.config;
 
 import com.zxxz.lv.filter.CrossDomainFilter;
 import com.zxxz.lv.listener.LogFileListener;
+import com.zxxz.lv.listener.OnlineNumListener;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import javax.servlet.http.HttpSessionListener;
 
 /**
  * servlet的一些配置
@@ -34,6 +37,20 @@ public class WebConfig {
         bean.setListener(listener);
         return bean;
     }
+
+    /**
+     * session监听器
+     * @return
+     */
+    @Bean
+    public ServletListenerRegistrationBean onlineCountListenerBean(){
+        ServletListenerRegistrationBean bean = new ServletListenerRegistrationBean();
+        OnlineNumListener listener = new OnlineNumListener();
+        bean.setListener(listener);
+        return bean;
+    }
+
+
 
 
 }

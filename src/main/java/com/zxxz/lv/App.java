@@ -24,5 +24,7 @@ public class App{
     public String entry(){
         return "redirect:/index";
     }
+ /*   @RequestMapping("/error")
+    public String error(){return "error";}*/
 
 }

@@ -2,6 +2,7 @@ package com.zxxz.lv;
 
 import com.zxxz.lv.controller.UserController;
 import com.zxxz.lv.entity.Country;
+import com.zxxz.lv.service.BaseService;
 import com.zxxz.lv.service.CountryService;
 import com.zxxz.lv.service.UserService;
 import org.junit.Before;
@@ -32,6 +33,9 @@ public class UserControllerTest {
     @Autowired
     private CountryService countryService;
 
+    @Autowired
+    private BaseService baseService;
+
     public MockHttpServletRequest request;
     public MockHttpServletResponse response;
 
@@ -61,6 +65,10 @@ public class UserControllerTest {
     public void test2(){
         Country byId = countryService.getById(5);
         System.out.println(byId);
+    }
+    @Test
+    public void test3(){
+        baseService.doAdd();
     }
 
 

@@ -10,6 +10,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+/**
+ * springMvc的一些配置
+ */
 @Configuration
 public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
     @Autowired
