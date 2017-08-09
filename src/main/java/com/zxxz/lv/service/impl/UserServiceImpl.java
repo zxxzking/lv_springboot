@@ -1,54 +1,32 @@
 package com.zxxz.lv.service.impl;
 
-import com.zxxz.lv.entity.UserInfo;
-import com.zxxz.lv.mapper.UserInfoMapper;
+import com.denghb.dbhelper.DbHelper;
+import com.zxxz.lv.entity.User;
 import com.zxxz.lv.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Resource
-    private UserInfoMapper userInfoMapper;
 
-    @Override
-    public UserInfo getById(int id) {
-        return null;
-    }
-
-    @Override
-    public UserInfo getByName(String name){
-        return userInfoMapper.getByName(name).get(0);
-    }
-
-    @Override
-    public int saveUser(UserInfo userInfo) {
-        return userInfoMapper.saveUser(userInfo.getUsername(),userInfo.getPassword(),Integer.valueOf(userInfo.getUsertype()));
-    }
-
-
+    @Autowired
+    private DbHelper dbHelper;
     @Override
     public boolean checkUserName(String userName){
-        List list = userInfoMapper.getByName(userName);
-        if(list == null||list.isEmpty()){
-            return true;
-        }else {
+        String sql = "select * from user where name=? and isactive = '1'";
+        User user = dbHelper.queryForObject(sql, User.class, userName);
+        if(null != user){
             return false;
+        }else {
+            return true;
         }
     }
-
-
     @Override
-    public List<UserInfo> count(String pageSize, String pageNum){
-        int pageS = Integer.valueOf(pageSize);
-        int pageN = Integer.valueOf(pageNum);
-        int index = (pageN-1)*pageS;
-        return userInfoMapper.queryAll(index,pageS);
+    public boolean saveUser(User user){
+        System.out.println("save");
+        return dbHelper.insert(user);
     }
-    @Override
-    public List<UserInfo> get(String userName){ return userInfoMapper.getByName(userName);}
 
 
 }

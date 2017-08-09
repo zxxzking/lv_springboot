@@ -1,19 +1,14 @@
 package com.zxxz.lv.service;
 
-import com.zxxz.lv.entity.UserInfo;
-
-import java.util.List;
+import com.zxxz.lv.entity.User;
 
 public interface UserService {
-    UserInfo getById(int id);
-
-    UserInfo getByName(String name);
-
-    int saveUser(UserInfo userInfo);
-
+    /**
+     * 查询用户名是否占用
+     * @param userName
+     * @return
+     */
     boolean checkUserName(String userName);
 
-    List<UserInfo> count(String pageSize, String pageNum);
-
-    List<UserInfo> get(String userName);
+    boolean saveUser(User user);
 }

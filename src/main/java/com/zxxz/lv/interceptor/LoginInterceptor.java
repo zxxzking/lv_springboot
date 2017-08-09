@@ -1,6 +1,6 @@
 package com.zxxz.lv.interceptor;
 
-import com.zxxz.lv.entity.UserInfo;
+import com.zxxz.lv.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -15,7 +15,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     private Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        UserInfo user = (UserInfo) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
         HttpSession session = request.getSession();
         //此方法用于遍历session中所有的属性
         Enumeration<String> attributeNames = session.getAttributeNames();

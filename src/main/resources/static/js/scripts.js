@@ -1,42 +1,42 @@
 
 jQuery(document).ready(function() {
 
-    $('.page-container form').submit(function(){
-        var username = $(this).find('.username').val();
-        var password = $(this).find('.password').val();
-        var password2 = $(this).find('.password2').val();
+    $('#sub').click(function(){
+        var username = $('.username').val();
+        var password = $('.password').val();
+        var password2 = $('.password2').val();
         if(username == '') {
-            $(this).find('.error').fadeOut('fast', function(){
+            $('.error').fadeOut('fast', function(){
                 $(this).css('top', '27px');
             });
-            $(this).find('.error').fadeIn('fast', function(){
+            $('.error').fadeIn('fast', function(){
                 $(this).parent().find('.username').focus();
             });
             return false;
         }
         if(password == '') {
-            $(this).find('.error').fadeOut('fast', function(){
+            $('.error').fadeOut('fast', function(){
                 $(this).css('top', '96px');
             });
-            $(this).find('.error').fadeIn('fast', function(){
+            $('.error').fadeIn('fast', function(){
                 $(this).parent().find('.password').focus();
             });
             return false;
         }
         if(password2 == '') {
-            $(this).find('.error').fadeOut('fast', function(){
+            $('.error').fadeOut('fast', function(){
                 $(this).css('top', '165px');
             });
-            $(this).find('.error').fadeIn('fast', function(){
+            $('.error').fadeIn('fast', function(){
                 $(this).parent().find('.password2').focus();
             });
             return false;
         }
         if(password != password2){
-            $(this).find('.tip').fadeOut('fast', function(){
+            $('.tip').fadeOut('fast', function(){
                 $(this).css('display', 'inline');
             });
-            $(this).find('.tip').fadeIn('fast', function(){
+            $('.tip').fadeIn('fast', function(){
                 $(this).parent().find('.password2').focus();
             });
             return false;
@@ -45,9 +45,14 @@ jQuery(document).ready(function() {
             type:"post",
             url:"/user/register",
             async:true,
-            data:$("#form").serialize(),
+            data:{
+                username:username,
+                password:password
+            },
             success:function(res){
+                alert(res)
                 res = JSON.parse(res);
+                console.log(res)
                 if(res.code == "0000"){
                     window.location.href = "/index"
                 }else{
@@ -55,7 +60,6 @@ jQuery(document).ready(function() {
                 }
             }
         });
-
     });
 
     $('.page-container form .username, .page-container form .password').keyup(function(){

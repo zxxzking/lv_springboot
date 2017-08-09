@@ -31,9 +31,12 @@ public class HomeController {
 
     @RequestMapping(value = "/toWeather")
     public String toWeather(HttpServletRequest request){
-        request.setAttribute("userName","zxxzking");
+        //request.setAttribute("userName","zxxzking");
         return "weather";
     }
-
+    @RequestMapping(value = "/")
+    public String index() {
+        return "redirect:/index";
+    }
 
 }

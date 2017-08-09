@@ -9,6 +9,5 @@ ADD (`inserttime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '≤Â»Î ±º‰
 ALTER TABLE table_name
 ADD INDEX `ix_inserttime` (`inserttime`),
 
-ADD INDEX `ix_updatetime` (`updatetime`),
+ADD INDEX `ix_updatetime` (`updatetime`)
 
-ADD INDEX `ix_isactive` (`isactive`);

@@ -41,12 +41,5 @@ public class LogFileListener implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
 
-        BaseService baseService = SpringContextHolder.getBean(BaseService.class);
-        try {
-            baseService.doClean();
-        } catch (Exception e) {
-            logger.error(e.getMessage());
-            logger.error("在线人数清空异常");
-        }
     }
 }

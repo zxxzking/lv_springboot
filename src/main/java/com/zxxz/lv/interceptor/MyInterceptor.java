@@ -1,12 +1,9 @@
 package com.zxxz.lv.interceptor;
 
-import com.zxxz.lv.entity.UserInfo;
 import com.zxxz.lv.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

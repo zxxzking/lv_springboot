@@ -24,7 +24,12 @@
 
 package com.zxxz.lv.entity;
 
-import javax.persistence.*;
+import com.denghb.dbhelper.annotation.Column;
+import com.denghb.dbhelper.annotation.Id;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Transient;
 import java.io.Serializable;
 
 /**

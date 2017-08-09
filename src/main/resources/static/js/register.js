@@ -14,8 +14,9 @@ $(function(){
                 userName:userName
             },
             success:function(res){
-                var result = res.result;
-                if(!result){
+                var result = jQuery.parseJSON(res);
+                var flag = result.result.flag;
+                if(!flag){
                     $(".tip2").css("display","inline")
                 }else{
                     $(".tip2").css("display","none")
