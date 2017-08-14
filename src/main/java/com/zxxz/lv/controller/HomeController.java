@@ -29,6 +29,11 @@ public class HomeController {
         return "index";
     }
 
+    @RequestMapping(value = "/toMap")
+    public String toMap(){
+        return "map";
+    }
+
     @RequestMapping(value = "/toWeather")
     public String toWeather(HttpServletRequest request){
         //request.setAttribute("userName","zxxzking");

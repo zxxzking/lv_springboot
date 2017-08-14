@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 
+/**
+ * 登录拦截器
+ */
 public class LoginInterceptor implements HandlerInterceptor {
     private Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
     @Override
@@ -21,7 +24,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         Enumeration<String> attributeNames = session.getAttributeNames();
         if(null == user){
             response.sendRedirect("toLogin");
-            return false;
+            return true;
         }
 
         return true;
