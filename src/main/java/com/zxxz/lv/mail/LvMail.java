@@ -1,25 +1,37 @@
 package com.zxxz.lv.mail;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
-
+@Component
 public class LvMail {
     //发件邮箱
-    public static String myEmailAccount = "zxxzking@qq.com";
+    private static String myEmailAccount = "zxxzking@qq.com";
     //邮箱密码
-    public static String myEmailPassword = "mfcklwqqgpywbeeh";
+    private static String myEmailPassword = "mfcklwqqgpywbeeh";
     //smtp地址
-    public static String myEmailSMTPHost = "smtp.qq.com";
+    private static String myEmailSMTPHost = "smtp.qq.com";
     //目标邮箱
-    public static String receiveMailAccount = "lvwowzhuanyong@163.com";
+    private static String receiveMailAccount = "lvwowzhuanyong@163.com";
+
+    @Value("${common.sendMail}")
+    private static String a;
+
+    static {
+        System.out.println(a);
+    }
+
 
 
     public static void main(String[] args) throws Exception{
-        // 1. 创建参数配置, 用于连接邮件服务器的参数配置
+
+        /*// 1. 创建参数配置, 用于连接邮件服务器的参数配置
         Properties props = new Properties();                    // 参数配置
         props.setProperty("mail.transport.protocol", "smtp");   // 使用的协议（JavaMail规范要求）
         props.setProperty("mail.smtp.host", myEmailSMTPHost);   // 发件人的邮箱的 SMTP 服务器地址
@@ -44,7 +56,7 @@ public class LvMail {
         transport.sendMessage(message, message.getAllRecipients());
 
         // 7. 关闭连接
-        transport.close();
+        transport.close();*/
     }
 
     public static MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail) throws Exception {

@@ -1,5 +1,6 @@
 package com.zxxz.lv.filter;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,10 +35,10 @@ public class CrossDomainFilter implements Filter {
         }
         //获取请求的源
         String url = req.getHeader("Origin");
-        //logger.info("请求的地址为："+ req.getServletPath());
+        logger.info("请求的源为："+ url);
+        resp.setHeader("Access-Control-Allow-Origin", url);
         resp.setHeader("Access-Control-Allow-Headers", "X-Requested-With, accept, content-type, xxxx");
         resp.setHeader("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH");
-        resp.setHeader("Access-Control-Allow-Origin", url);
         resp.setHeader("Access-Control-Allow-Credentials", "true");
         filterChain.doFilter(servletRequest, resp);
     }

@@ -65,7 +65,8 @@ public class SecurityUtils {
     }  
     
     public static void main(String[] args) {
-    	String s = new String("test123");  
+    	String s = new String("d3776loqw21h77mmh675aas567xyusgKUL2H3DK4735O9861M6Q1ETGHB" +
+                "1C5ZK17K3P32VZR31WC77AC9E7TC43188PD3H9test123");
         System.out.println("原始：" + s);  
         System.out.println("MD5后：" + string2MD5(s));  
         System.out.println("加密的：" + convertMD5(s));  

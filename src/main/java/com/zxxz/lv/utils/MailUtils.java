@@ -38,6 +38,8 @@ public class MailUtils {
     private static Session session = null;
 
 
+
+
     // 初始化参数
      static {
         props.setProperty("mail.transport.protocol", "smtp");   // 使用的协议（JavaMail规范要求）

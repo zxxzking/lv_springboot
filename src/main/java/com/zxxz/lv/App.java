@@ -1,6 +1,7 @@
 package com.zxxz.lv;
 
 import com.zxxz.lv.listener.TestDemo;
+import com.zxxz.lv.mail.LvMail;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
@@ -23,19 +24,10 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = "com.zxxz.lv.mapper")
 public class App{
 
-
-
-
-
     public static void main( String[] args ){
         SpringApplication.run(App.class,args);
+        new LvMail();
 
     }
-    //@RequestMapping("/")
-    public String entry(){
-        return "redirect:/index";
-    }
- /*   @RequestMapping("/error")
-    public String error(){return "error";}*/
 
 }
