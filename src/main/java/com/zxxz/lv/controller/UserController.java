@@ -69,7 +69,6 @@ public class UserController {
         boolean flag = true;
         try {
             flag = userService.saveUser(user);
-            System.out.println("doRegister");
         } catch (Exception e) {
             flag = false;
             log.error("注册失败");

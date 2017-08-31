@@ -3,12 +3,19 @@ package com.zxxz.lv.config;
 import com.zxxz.lv.filter.CrossDomainFilter;
 import com.zxxz.lv.listener.LogFileListener;
 import com.zxxz.lv.listener.OnlineNumListener;
+import org.quartz.ee.servlet.QuartzInitializerListener;
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 import javax.servlet.http.HttpSessionListener;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * servlet的一些配置
@@ -46,6 +53,18 @@ public class WebConfig {
     public ServletListenerRegistrationBean onlineCountListenerBean(){
         ServletListenerRegistrationBean bean = new ServletListenerRegistrationBean();
         OnlineNumListener listener = new OnlineNumListener();
+        bean.setListener(listener);
+        return bean;
+    }
+
+    /**
+     * Quartz监听
+     * @return
+     */
+    @Bean
+    public ServletListenerRegistrationBean executorListener(){
+        ServletListenerRegistrationBean bean = new ServletListenerRegistrationBean();
+        QuartzInitializerListener listener = new QuartzInitializerListener();
         bean.setListener(listener);
         return bean;
     }

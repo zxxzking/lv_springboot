@@ -90,10 +90,6 @@ public class PagingResults<T> implements Serializable {
 		return summary;
 	}
 
-	/**
-	 * @param params
-	 *            the {@link #summary} to set
-	 */
 	private void setSummary(Map<String, Object> summary) {
 		this.summary = summary;
 	}

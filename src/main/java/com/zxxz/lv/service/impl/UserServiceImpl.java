@@ -4,11 +4,13 @@ import com.denghb.dbhelper.DbHelper;
 import com.zxxz.lv.entity.User;
 import com.zxxz.lv.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class UserServiceImpl implements UserService {
+
 
     @Autowired
     private DbHelper dbHelper;
@@ -24,7 +26,6 @@ public class UserServiceImpl implements UserService {
     }
     @Override
     public boolean saveUser(User user){
-        System.out.println("save");
         return dbHelper.insert(user);
     }
 
