@@ -3,7 +3,6 @@ package com.zxxz.lv.controller;
 import com.zxxz.lv.entity.User;
 import com.zxxz.lv.service.UserService;
 import com.zxxz.lv.utils.JsonResponse;
-import com.zxxz.lv.utils.SecurityUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

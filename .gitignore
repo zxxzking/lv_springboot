@@ -7,3 +7,7 @@
 .idea
 target/
 springboot.iml
+src/main/java/com/zxxz/lv/annotation/
+src/main/java/com/zxxz/lv/mail/
+src/main/java/com/zxxz/lv/redis/
+src/main/resources/config/

@@ -1,5 +1,7 @@
 package com.zxxz.lv.controller;
 
+import com.zxxz.lv.dto.WeatherReqDto;
+import com.zxxz.lv.responseModel.ResultBean;
 import com.zxxz.lv.utils.GsonUtils;
 import com.zxxz.lv.utils.HttpToolKit;
 import com.zxxz.lv.utils.JsonResponse;
@@ -10,9 +12,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Result;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +42,15 @@ public class WeatherController {
         Map<String, String> params = new HashMap<String, String>();
         params.put("city", city);
         params.put("appkey", jdSecret);
+        WeatherReqDto dto = new WeatherReqDto();
+        dto.setAppkey(jdSecret);
+        dto.setCity(city);
         String resp = HttpToolKit.doGet(weatherUrl, params);
+        RestTemplate template = new RestTemplate();
+        String s = template.postForObject(weatherUrl, dto, String.class);
+        System.out.println(s);
+        Map map = GsonUtils.fromJson(s, Map.class);
+        System.out.println(map);
         result = GsonUtils.fromJson(resp, Map.class);
         if(result!= null){
             if(!result.get("code").equals("10000")){
@@ -50,6 +62,18 @@ public class WeatherController {
             jsonResponse=JsonResponse.buildFailure("无结果");
         }
         return jsonResponse.toJsonString();
+    }
+
+
+    @RequestMapping(value = "/test/v1.0", produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public ResultBean test(HttpServletRequest request, HttpServletResponse response, WeatherReqDto dto){
+        System.out.println(dto.getCity());
+        System.out.println(dto);
+        ResultBean resultBean = new ResultBean(dto);
+
+
+        return resultBean;
     }
 
 }

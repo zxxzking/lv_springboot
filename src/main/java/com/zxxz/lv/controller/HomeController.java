@@ -44,4 +44,9 @@ public class HomeController {
         return "redirect:/index";
     }
 
+    @RequestMapping(value = "upload")
+    public String upload(){
+        return  "upload";
+    }
+
 }
